@@ -1,5 +1,5 @@
 # Philosophers - My Threading Simulation
-
+<img width="1544" height="793" alt="Philosophers" src="https://github.com/user-attachments/assets/32a6ba51-ee7b-4439-b33c-c0e0d9e62d75" />
 
 *My multithreading and synchronization project*
 ---
