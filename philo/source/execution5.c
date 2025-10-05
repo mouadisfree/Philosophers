@@ -6,7 +6,7 @@
 /*   By: mokatfi <mokatfi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 11:36:13 by mokatfi           #+#    #+#             */
-/*   Updated: 2025/07/17 00:12:09 by mokatfi          ###   ########.fr       */
+/*   Updated: 2025/10/05 11:07:59 by mokatfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,10 @@ void	ft_usleep(long ms, t_prog *prog)
 	{
 		pthread_mutex_lock(&prog->dead_mtx);
 		if (prog->dead)
+		{
+			pthread_mutex_unlock(&prog->dead_mtx);
 			return ;
+		}
 		pthread_mutex_unlock(&prog->dead_mtx);
 		usleep(100);
 	}
